@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ultimate_kniffel/src/StartPage.dart';
+import 'package:ultimate_kniffel/screens/StartPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ultimate Kniffel',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
       home: const StartPage(),
