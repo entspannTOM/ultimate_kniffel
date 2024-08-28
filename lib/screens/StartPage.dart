@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ultimate_kniffel/constants/sizes.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({super.key});
@@ -10,6 +11,7 @@ class StartPage extends StatefulWidget {
 class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
+    Sizes().initialize(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -29,9 +31,24 @@ class _StartPageState extends State<StartPage> {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
-            Text(
-              'DREI',
-              style: Theme.of(context).textTheme.headlineSmall,
+            ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'Kniffel',
+                style: Theme.of(context).textTheme.bodyLarge,
+
+              )
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Container(
+                width: Sizes.buttonWidth,
+                height: Sizes.buttonHeight,
+                child: Text(
+                  "Stadt Land Fluss",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              )
             ),
           ],
         ),
@@ -39,3 +56,5 @@ class _StartPageState extends State<StartPage> {
     );
   }
 }
+
+
